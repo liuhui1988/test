@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="vUJ-LQ-dMg" customClass="CZHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="437" height="334"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ZK-rs-LAE">
+                    <rect key="frame" x="12" y="280" width="413" height="2"/>
+                    <color key="backgroundColor" red="1" green="0.133361851" blue="0.097620271859999996" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="2" id="z9b-8K-Wzy"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="猜你喜欢" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lN2-nC-eTe">
+                    <rect key="frame" x="10" y="302" width="68" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BWN-u6-wGo">
+                    <rect key="frame" x="10" y="17" width="419" height="245"/>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="BWN-u6-wGo" firstAttribute="leading" secondItem="vUJ-LQ-dMg" secondAttribute="leadingMargin" constant="2" id="Az4-oU-l1n"/>
+                <constraint firstItem="2ZK-rs-LAE" firstAttribute="leading" secondItem="vUJ-LQ-dMg" secondAttribute="leadingMargin" constant="4" id="Dho-Kx-0Ps"/>
+                <constraint firstItem="BWN-u6-wGo" firstAttribute="top" secondItem="vUJ-LQ-dMg" secondAttribute="topMargin" constant="9" id="SJx-D5-baP"/>
+                <constraint firstItem="lN2-nC-eTe" firstAttribute="leading" secondItem="vUJ-LQ-dMg" secondAttribute="leading" constant="10" id="StT-JO-VaG"/>
+                <constraint firstItem="2ZK-rs-LAE" firstAttribute="top" secondItem="BWN-u6-wGo" secondAttribute="bottom" constant="18" id="aNw-5S-OLY"/>
+                <constraint firstAttribute="bottom" secondItem="lN2-nC-eTe" secondAttribute="bottom" constant="11" id="bJe-cQ-pgF"/>
+                <constraint firstAttribute="trailingMargin" secondItem="2ZK-rs-LAE" secondAttribute="trailing" constant="4" id="lyF-RQ-KpM"/>
+                <constraint firstItem="lN2-nC-eTe" firstAttribute="top" secondItem="2ZK-rs-LAE" secondAttribute="bottom" constant="20" id="me3-Um-ueW"/>
+                <constraint firstItem="BWN-u6-wGo" firstAttribute="trailing" secondItem="vUJ-LQ-dMg" secondAttribute="trailingMargin" id="szK-aP-1HA"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="scrollView" destination="BWN-u6-wGo" id="P2J-hB-8UW"/>
+            </connections>
+            <point key="canvasLocation" x="426.5" y="289"/>
+        </view>
+    </objects>
+</document>

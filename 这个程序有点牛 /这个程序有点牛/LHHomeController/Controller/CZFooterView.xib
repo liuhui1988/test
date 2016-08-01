@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="dIx-Ld-lLW" customClass="CZFooterView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GCN-7v-L2p">
+                    <rect key="frame" x="10" y="5" width="355" height="34"/>
+                    <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="加载更多...">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="loadMoreClick" destination="dIx-Ld-lLW" eventType="touchUpInside" id="OaJ-Oi-WrS"/>
+                    </connections>
+                </button>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9uB-eb-tp2">
+                    <rect key="frame" x="93" y="11" width="188" height="22"/>
+                    <subviews>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="ehD-Yq-7fQ">
+                            <rect key="frame" x="27" y="2" width="20" height="20"/>
+                        </activityIndicatorView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="拼命加载更多..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t9c-1N-aGq">
+                            <rect key="frame" x="55" y="0.0" width="150" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="t9c-1N-aGq" firstAttribute="top" secondItem="9uB-eb-tp2" secondAttribute="top" id="5Kq-1d-kiw"/>
+                        <constraint firstAttribute="bottom" secondItem="t9c-1N-aGq" secondAttribute="bottom" constant="1" id="BzP-pC-oNO"/>
+                        <constraint firstItem="ehD-Yq-7fQ" firstAttribute="top" secondItem="9uB-eb-tp2" secondAttribute="top" constant="2" id="g7s-bA-OjG"/>
+                        <constraint firstAttribute="bottom" secondItem="ehD-Yq-7fQ" secondAttribute="bottom" id="gnb-D6-Wbt"/>
+                        <constraint firstItem="ehD-Yq-7fQ" firstAttribute="leading" secondItem="9uB-eb-tp2" secondAttribute="leading" constant="27" id="kRT-wN-WdX"/>
+                        <constraint firstAttribute="trailing" secondItem="t9c-1N-aGq" secondAttribute="trailing" constant="-17" id="l5T-LV-56V"/>
+                        <constraint firstItem="t9c-1N-aGq" firstAttribute="leading" secondItem="ehD-Yq-7fQ" secondAttribute="trailing" constant="8" id="sKb-OC-UsW"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="9uB-eb-tp2" firstAttribute="top" secondItem="dIx-Ld-lLW" secondAttribute="topMargin" constant="3" id="2NE-xM-cg8"/>
+                <constraint firstAttribute="bottomMargin" secondItem="9uB-eb-tp2" secondAttribute="bottom" constant="3" id="6Jq-9p-vOV"/>
+                <constraint firstItem="GCN-7v-L2p" firstAttribute="leading" secondItem="dIx-Ld-lLW" secondAttribute="leading" constant="10" id="FSw-bG-ffn"/>
+                <constraint firstItem="9uB-eb-tp2" firstAttribute="leading" secondItem="dIx-Ld-lLW" secondAttribute="leadingMargin" constant="85" id="JNW-Kr-0J4"/>
+                <constraint firstAttribute="trailing" secondItem="GCN-7v-L2p" secondAttribute="trailing" constant="10" id="Jmm-KQ-e3v"/>
+                <constraint firstAttribute="bottom" secondItem="GCN-7v-L2p" secondAttribute="bottom" constant="5" id="Snd-9e-LpM"/>
+                <constraint firstItem="GCN-7v-L2p" firstAttribute="top" secondItem="dIx-Ld-lLW" secondAttribute="top" constant="5" id="b1e-WH-bj1"/>
+                <constraint firstAttribute="trailingMargin" secondItem="9uB-eb-tp2" secondAttribute="trailing" constant="86" id="vJd-Fc-urA"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="loadMoreBtn" destination="GCN-7v-L2p" id="lSt-dQ-Xg3"/>
+                <outlet property="loadMoreView" destination="9uB-eb-tp2" id="kTR-27-BOo"/>
+            </connections>
+            <point key="canvasLocation" x="451.5" y="363"/>
+        </view>
+    </objects>
+</document>
